@@ -1,78 +1,33 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title> RWD </title>
-<meta charset="utf-8">
-<!-- 1st step for RWD-->
-<!--define viewport users visible area-->
-<!--width variable will store width of the devicce-->
-<!--for mobile width will less and for desktop width will be more dektop it can be 1700px , for mobile -->
-<meta name="viewport" content="width=device-width,inital-scale=1.0">
-
-<!-- 2nd step for RWD - define grid view-->
-<!-- grid is used for Layout purpose-->
-<!-- good CSS will use 12 colum grid view-->
+	<title> CSS slelctors </title>
 <style>
-/*1. */
-*{box-sizing: border-box;} /* so you dont need to calculate padding and border*/
-/*2. make 12 columns*/
-	.col-1 {width: 8.33%;}
-	.col-2 {width: 16.66%;}
-	.col-3 {width: 25%;}
-	.col-4 {width: 33.33%;}
-	.col-5 {width: 41.66%;}
-	.col-6 {width: 50%;}
-	.col-7 {width: 58.33%;}
-	.col-8 {width: 66.66%;}
-	.col-9 {width: 75%;}
-	.col-10 {width: 83.33%;}
-	.col-11 {width: 91.66%;}
-	.col-12 {width: 100%;}
-	/*3. - float */
-	[class*="col-"]{
-		float: left;
-		padding: 15px;
-		border:2px solid white;
-			background-color: lightblue;
-	}
-	/*4. - row*/
-	.row::after {
-		content: "";
-		clear: both;
-		display: table;
+h1 { background-color: red; border:5px solid black; padding: 5px; width: 500px} /* select all h1 element */
+h1.class1{background-color: green;} /*slelct all element with the class name calss1 */
+h1#id1{background-color: yellow;} /* select element wuth id id1*/
+*{background-color: pink; box-sizing: border-box;} /* selects all the element - this will not override*/
+div p {color: yellow;}/* selects all p inside div*/
+h1,p {color: red;} /* selects h1 and p with, group selecrot */
+div > em {color: blue;} /* selectors all em where parent is div */
 
-	}
+
 </style>
 </head>
 <body>
+<h1 class="class1"> Heading </h1>
+<h1 id="id1"> Heading </h1>
+<p> para </p>
 <div>
-<div class="row">	<!--total 1-->
-	<div class="col-12"> Heading </div>
+	<em> some text</em>
+	<p> <sm>para 2</sm></p>
+	<em> some more text</em>
 </div>
-<div>
-<div class="row">
-	<div class="col-4"> Menu</div>
-		<div class="col-8"> Content </div>
-</div>
-<div>
-<div class="row">
-	<div class="col-3"> forder </div>
-	<div class="col-3"> forder </div>
-	<div class="col-3"> forder </div>
-	<div class="col-3"> forder </div>
-</div>
-<div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
-	<div class="col-1"> anything </div>
+
+
+
+
+
 </body>
 </html>
